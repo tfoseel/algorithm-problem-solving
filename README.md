@@ -1,2 +1,3 @@
 # algorithm-problem-solving
-Solving some problems on Baekjoon Online Judge(https://www.acmicpc.net/) and modularizing some often-used functions or templates.
+
+* Solving some algorithm problems on <a href="https://www.acmicpc.net/">Baekjoon Online Judge</a> with C++ since 2022.
