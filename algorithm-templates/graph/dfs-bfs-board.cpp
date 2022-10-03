@@ -4,7 +4,7 @@
 
 const int BOARD_SIZE {1000};
 
-// An 2D array representing board.
+// A 2D array representing board.
 int board[BOARD_SIZE][BOARD_SIZE];
 // An 2D array to check if a vertex is visited in O(1) time.
 bool visited[BOARD_SIZE][BOARD_SIZE];
