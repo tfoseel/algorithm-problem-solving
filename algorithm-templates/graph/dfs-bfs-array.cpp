@@ -4,7 +4,7 @@
 
 const int ARR_SIZE {1000};
 
-// An 2D array representing graph.
+// A 2D array representing an adjacency matrix of a graph.
 int graph[ARR_SIZE][ARR_SIZE];
 // An 1D array to check if a vertex is visited in O(1) time.
 bool visited[ARR_SIZE];
@@ -14,12 +14,12 @@ bool visited[ARR_SIZE];
 // Depth-first-search algorithm.
 void DFS(int v, int n) {
     if (visited[v]) return;
-	// Mark the vertice as visited and do something.
+    // Mark the vertice as visited and do something.
     visited[v] = true;
-	// std::cout << u << std::endl;
+    // std::cout << u << std::endl;
     for (int i=0; i<n; i++) {
-		if (graph[v][i] == 1) DFS(i, n);
-	}
+        if (graph[v][i] == 1) DFS(i, n);
+    }
 }
 
 // Breadth-first-search algorithm.
@@ -31,14 +31,14 @@ void BFS(int v, int n) {
     while (!q.empty()) {
         int u = q.front();
         q.pop();
-		// Do something here.
+        // Do something here.
         // std::cout << u << std::endl;
         for (int i=1; i<=n; i++) {
             if (graph[u][i] == 1 && !visited[i]) {
-				// Mark the vertice as visited and push to the queue.
+                // Mark the vertice as visited and push to the queue.
                 visited[i] = true;
                 q.push(i);
             }
-		}
+        }
     }
 }

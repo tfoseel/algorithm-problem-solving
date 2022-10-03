@@ -12,9 +12,9 @@ std::vector<bool> visited;
 // Depth-first-search algorithm.
 void DFS(int v) {
     if (visited[v]) return;
-	// Mark the vertice as visited and do something.
+    // Mark the vertice as visited and do something.
     visited[v] = true;
-	// std::cout << v << std::endl;
+    // std::cout << v << std::endl;
     for (auto i: graph[v]) DFS(i);
 }
 
@@ -27,14 +27,14 @@ void BFS(int v) {
     while (!q.empty()) {
         int u = q.front();
         q.pop();
-		// Do something here.
+        // Do something here.
         // std::cout << u << std::endl;
         for (auto i: graph[v]) {
             if (!visited[i]) {
-				// Mark the vertice as visited and push to the queue.
+                // Mark the vertice as visited and push to the queue.
                 visited[i] = true;
                 q.push(i);
             }
-		}
+        }
     }
 }

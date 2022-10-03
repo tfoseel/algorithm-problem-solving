@@ -19,9 +19,9 @@ std::vector<std::pair<int, int>> next(std::pair<int, int> v, int m, int n) {
 // Depth-first-search algorithm.
 void DFS(std::pair<int, int> v, int m, int n) {
     if (visited[v.first][v.second]) return;
-	// Mark the vertice as visited and do something.
+    // Mark the vertice as visited and do something.
     visited[v.first][v.second] = true;
-	// std::cout << v.first << " " << v.second << std::endl;
+    // std::cout << v.first << " " << v.second << std::endl;
     for (auto p: next(v, m, n)) DFS(p, m, n);
 }
 
@@ -34,14 +34,14 @@ void BFS(std::pair<int, int> v, int m, int n) {
     while (!q.empty()) {
         auto u = q.front();
         q.pop();
-		// Do something here.
+        // Do something here.
         // std::cout << u.first << " " << u.second << std::endl;
         for (auto p: next(u, m, n)) {
             if (!visited[p.first][p.second]) {
-				// Mark the vertice as visited and push to the queue.
+                // Mark the vertice as visited and push to the queue.
                 visited[p.first][p.second] = true;
                 q.push(p);
             }
-		}
+        }
     }
 }
