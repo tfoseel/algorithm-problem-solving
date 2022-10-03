@@ -1,7 +1,8 @@
+#include <iostream>
 #include <vector>
 #include <queue>
 
-// An adjacency matrix representing graph.
+// A 2D vector representing an adjacency list of a graph.
 std::vector<std::vector<int, int>> graph;
 // An 1D vector to check if a vertex is visited in O(1) time.
 std::vector<bool> visited;
