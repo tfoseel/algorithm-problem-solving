@@ -33,8 +33,6 @@ for p in problems:
             algorithm_tags[t] = []
         algorithm_tags[t].append(p + "번: " + info[0]["titleKo"])
 
-print(algorithm_tags)
-
 # Write new README.md
 f = open("./README.md", "w", encoding="UTF-8")
 for line in content:
