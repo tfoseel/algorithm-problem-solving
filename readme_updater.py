@@ -2,6 +2,12 @@ import os
 import requests
 import json
 
+"""
+This program gets list of file names from 'algorithm-solution' directory and makes list of solved problems.
+Then it sorts problems by what algorithms used and makes dictionary through solved.ac API.
+It gets all contents from README_BASE.md, and appends algorithm section and <a> tag according to the dictionary. 
+"""
+
 # API
 url = "https://solved.ac/api/v3/problem/lookup"
 headers = {"Content-Type": "application/json"}
