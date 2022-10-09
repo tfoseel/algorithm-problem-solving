@@ -1,46 +1,47 @@
-// BOJ 1018. 제곱 ㄴㄴ 수
+// BOJ 10942. 팰린드롬?
 
-#include <iostream>
-#include <cmath>
-#include <vector>
+#include <cstdio>
 
-// Define maximum size of Eratosthenes' seive. sqrt(1,000,000,000,000 + 1,000,000) = 1,000,499.8...
-const long long SEIVE_MAX_SIZE {1'000'500};
+int arr[2000];
 
-// Seive to find primes same or less than sqrt(max).
-bool seive[SEIVE_MAX_SIZE];
-std::vector<long long> primes;
-bool filter[1'000'001];
+// dp[x][y] stores results of function palindrome(x, y).
+// A value of dp[x][y] is 0 if subanswer is not calculated yet, 1 if true, 2 if false.
+// The reason for assigning value like this is to save time for initialization.
+short dp[2001][2001];
+
+// Returns true if substring s[x...y] of given string is a palindrome.
+bool palindrome(int x, int y) {
+    // Trivial base case.
+    if (y - x <= 0) {
+        dp[x][y] = 1;
+        return true;
+    }
+    // Use stored value.
+    if (dp[x][y] != 0) return (dp[x][y] == 1);
+    // Get an answer from answers of smaller subproblems.
+    if (arr[x] == arr[y] && palindrome(x + 1, y - 1)) {
+        dp[x][y] = 1;
+        return true;
+    } else {
+        dp[x][y] = 2;
+        return false;
+    }
+    return true;
+}
 
 int main() {
-    long long min, max;
+    int n, m;
     // Input
-    std::cin >> min >> max;
-    // Solve
-    // First find primes numbers same or less than sqrt(max).
-    seive[0] = false;
-    seive[1] = false;
-    seive[2] = true;
-    for (long long i=3; i*i<=max; i+=2) seive[i] = true;
-    for (long long i=3; i*i*i*i<=max; i+=2) {
-        if (seive[i])
-            for (long long j=3; i*i*j*j<=max; j+=2) seive[i * j] = false;
+    scanf("%d", &n);
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    scanf("%d", &m);
+    for (int i=0; i<m; i++) {
+        int x, y;
+        scanf("%d %d", &x, &y);
+        // Given index starts from 1, while array index starts from 0.
+        x--; y--;
+        // Output
+        printf("%d\n", (int)palindrome(x, y));
     }
-    for (long long i=2; i*i<=max; i++) {
-        if (seive[i]) primes.push_back(i);
-    }
-    // if x = a * i^2 for integer a, i, then i <= sqrt(x).
-    // Use seive on [min, max], marking multiples of i^2 where i is a prime number satisfying i <= sqrt(x).
-    for (long long i: primes) {
-        // x is multiple of (i * i) nearest to min.
-        long long x;
-        if (min % (i * i) == 0) x = min;
-        else x = min - (min % (i * i)) + (i * i);
-        for (long long j=x; j<=max; j+=i*i) filter[j - min] = true;
-    }
-    long long answer {0};
-    for (long long i=min; i<=max; i++) answer += (filter[i - min] == false);
-    // Output
-    std::cout << answer << std::endl;
     return 0;
 }
