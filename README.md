@@ -2,8 +2,6 @@
 
 <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=C%2B%2B&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"/> 
 
-<hr>
-
 <img src="http://mazandi.herokuapp.com/api?handle=leesoft&theme=warm"/>
 
 * Solving some algorithm problems on <a href="https://www.acmicpc.net/">Baekjoon Online Judge</a> with C++ since 2022.
