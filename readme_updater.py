@@ -43,6 +43,6 @@ f.write("\n## Solved Problems\n")
 for key, value in sorted(algorithm_tags.items()):
     f.write("### " + key + "\n")
     for v in sorted(value):
-        f.write('* <a href="https://www.acmicpc.net/problem/{0}"> {1}</a>\n'.format(v.split(":")[0], v))
+        f.write('* <a href="https://www.acmicpc.net/problem/{0}"> {1}</a>\n'.format(v.split(":")[0][:-1], v))
     f.write("\n")
 f.close()
