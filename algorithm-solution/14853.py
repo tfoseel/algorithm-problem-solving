@@ -24,7 +24,7 @@ def solve():
     # Here, p < q always holds.
     # To compute these values takes a lot of time, so first try to compute when k = m1 and reuse the value for other k.
     base = 1
-    for i in range (0, n2 + 1):
+    for i in range(0, n2 + 1):
         base = base * (n1 - m1 + 1 + i) / (n1 + 2 + i)
     answer = base
     # Here, when k = m1 + i, the desired value is base * (m1 + i) * (n2 + 2 - i) / i / (n1 + n2 - m1 + 2 - i).
