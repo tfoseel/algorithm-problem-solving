@@ -42,7 +42,7 @@ void solve(int size) {
         // For any vertice j != 0 in subset S, get C(S, j) from partial answers C(S - {j}, i).
         for (int j=1; j<subset.size(); j++) {
             if (subset[j] == '0') continue;
-            // C(S, j) == min(C(S - {j}, i)) where vertice i != 0 is in set S - {j}.
+            // C(S, j) == min(C(S - {j}, i)) + cost(i, j) where vertice i != 0 is in set S - {j}.
             subset[j] = '0';
             int sub_answer {INF};
             for (int i=1; i<subset.size(); i++) {
