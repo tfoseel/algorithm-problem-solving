@@ -1,12 +1,22 @@
 import os
 import requests
+from bs4 import BeautifulSoup
 import json
 
 """
 This program gets list of file names from 'algorithm-solution' directory and makes list of solved problems.
 Then it sorts problems by what algorithms used and makes dictionary through solved.ac API.
-It gets all contents from README_BASE.md, and appends algorithm section and <a> tag according to the dictionary. 
+It gets all contents from README_BASE.md, and attaches algorithm section and <a> tag according to the dictionary. 
 """
+
+# Make dictionary to convert Korean tags to English
+ko_to_en = dict()
+res = requests.get("https://www.acmicpc.net/problem/tags")
+soup = BeautifulSoup(res.content, "html.parser")
+tags = soup.find_all("td")
+for i in range(len(tags)):
+    if i % 4 == 0:
+        ko_to_en[tags[i].text] = tags[i + 1].text
 
 # API
 url = "https://solved.ac/api/v3/problem/lookup"
@@ -33,7 +43,7 @@ for p in problems:
     querystring = {"problemIds": p}
     response = requests.request("GET", url, headers=headers, params=querystring)
     info = json.loads(response.text)
-    tags = list(map(lambda x: x["displayNames"][0]["name"], info[0]["tags"]))
+    tags = list(map(lambda x: ko_to_en[x["displayNames"][0]["name"]], info[0]["tags"]))
     for t in tags:
         if t not in algorithm_tags:
             algorithm_tags[t] = []

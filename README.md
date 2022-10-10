@@ -9,35 +9,35 @@
 * From now on I will review some impressive problems among them and make some code snippets for further problem solving.
 
 ## Solved Problems
-### 다이나믹 프로그래밍
+### Bayes Theorem
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Bitmask
+* <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
+
+### Calculus
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Combinatorics
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Dynamic Programming
 * <a href="https://www.acmicpc.net/problem/10942"> 10942번: 팰린드롬?</a>
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
 * <a href="https://www.acmicpc.net/problem/2618"> 2618번: 경찰차</a>
 
-### 미적분학
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
-
-### 베이즈 정리
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
-
-### 비트마스킹
+### Dynamic Programming Using Bitfield
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
 
-### 비트필드를 이용한 다이나믹 프로그래밍
+### Mathematics
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Probability Theory
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Statistics
+* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Travelling Salesman Problem
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
-
-### 수학
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
-
-### 외판원 순회 문제
-* <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
-
-### 조합론
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
-
-### 통계학
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
-
-### 확률론
-* <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
