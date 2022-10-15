@@ -1,3 +1,5 @@
+from datetime import date
+
 import os
 import requests
 import json
@@ -58,3 +60,10 @@ for key, value in sorted(tag_problem_dict.items()):
         f.write('* <a href="https://www.acmicpc.net/problem/{0}"> {1}</a>\n'.format(v.split(":")[0][:-1], v))
     f.write("\n")
 f.close()
+
+# Automatically git add/commit/push solved problems.
+os.system("git add README.md")
+os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Update README.md (Automatically)"'))
+os.system("git add .")
+os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Solve problem (Automatically)"'))
+os.system("git push")
