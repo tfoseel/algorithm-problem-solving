@@ -1,6 +1,5 @@
 import os
 import requests
-from bs4 import BeautifulSoup
 import json
 
 """
@@ -8,19 +7,6 @@ This program gets list of file names from 'algorithm-solution' directory and mak
 Then it sorts problems by what algorithms used and makes dictionary through solved.ac API.
 It gets all contents from README_BASE.md, and attaches algorithm section and <a> tag according to the dictionary. 
 """
-
-# Make dictionary to convert Korean tags to English
-ko_to_en = dict()
-res = requests.get("https://www.acmicpc.net/problem/tags")
-soup = BeautifulSoup(res.content, "html.parser")
-tags = soup.find_all("td")
-for i in range(len(tags)):
-    if i % 4 == 0:
-        ko_to_en[tags[i].text] = tags[i + 1].text
-
-# API
-url = "https://solved.ac/api/v3/problem/lookup"
-headers = {"Content-Type": "application/json"}
 
 # Allowed extensions
 extensions = ["cpp", "py"]
@@ -32,29 +18,41 @@ for file in file_list:
     if file.split(".")[1] in extensions:
         problems.append(file.split(".")[0])
 
+# Get a mapping from bojTagId to bogTagName.
+url = "https://solved.ac/api/v3/tag/list"
+response = requests.request("GET", url, headers={"Content-Type": "application/json"})
+info = json.loads(response.text)
+id_name_dict = dict()
+for t in info["items"]:
+    for n in t["displayNames"]:
+        if n["language"] == "en":
+            id_name_dict[t["bojTagId"]] = " ".join(list(map(lambda s: s.capitalize(), n["name"].split(" "))))
+
+# Get information of solved problems.
+url = "https://solved.ac/api/v3/problem/lookup"
+querystring = {"problemIds": ','.join(problems)}
+response = requests.request("GET", url, headers={"Content-Type": "application/json"}, params=querystring)
+info = json.loads(response.text)
+
+# Make a dictionary, BOJ tag for key and problem ID and title for value.
+tag_problem_dict = dict()
+for p in info:
+    for t in list(map(lambda x: id_name_dict[x["bojTagId"]], p["tags"])):
+        if t not in tag_problem_dict:
+            tag_problem_dict[t] = []
+        tag_problem_dict[t].append(str(p["problemId"]) + "번: " + p["titleKo"])
+
 # Get all content of README_BASE.md
 f = open("./README_BASE.md")
 content = f.readlines()
 f.close()
-
-# Build dictionary to show solved problems.
-algorithm_tags = dict()
-for p in problems:
-    querystring = {"problemIds": p}
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    info = json.loads(response.text)
-    tags = list(map(lambda x: ko_to_en[x["displayNames"][0]["name"]], info[0]["tags"]))
-    for t in tags:
-        if t not in algorithm_tags:
-            algorithm_tags[t] = []
-        algorithm_tags[t].append(p + "번: " + info[0]["titleKo"])
 
 # Write new README.md
 f = open("./README.md", "w", encoding="UTF-8")
 for line in content:
     f.write(line)
 f.write("\n## Solved Problems\n")
-for key, value in sorted(algorithm_tags.items()):
+for key, value in sorted(tag_problem_dict.items()):
     f.write("### " + key + "\n")
     for v in sorted(value):
         f.write('* <a href="https://www.acmicpc.net/problem/{0}"> {1}</a>\n'.format(v.split(":")[0][:-1], v))

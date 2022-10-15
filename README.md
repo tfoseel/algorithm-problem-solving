@@ -12,6 +12,9 @@
 ### Bayes Theorem
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
+### Binary Search
+* <a href="https://www.acmicpc.net/problem/14003"> 14003번: 가장 긴 증가하는 부분 수열 5</a>
+
 ### Bitmask
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
 
@@ -28,6 +31,9 @@
 
 ### Dynamic Programming Using Bitfield
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
+
+### Longest Increasing Sequence In O(n Log N)
+* <a href="https://www.acmicpc.net/problem/14003"> 14003번: 가장 긴 증가하는 부분 수열 5</a>
 
 ### Mathematics
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
