@@ -63,7 +63,7 @@ f.close()
 
 # Automatically git add/commit/push solved problems.
 os.system("git add README.md")
-os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Update README.md (Automatically)"'))
-os.system("git add .")
-os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Solve problem (Automatically)"'))
+os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Update README.md (Auto committed)"'))
+os.system("git add algorithm-solution")
+os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Solve problem (Auto committed)"'))
 os.system("git push")
