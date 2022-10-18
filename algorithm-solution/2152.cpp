@@ -98,7 +98,7 @@ int main() {
     for (int i=0; i<sccs.size(); i++) {
         metagraph.push_back(std::set<int>());
         meta_visited.push_back(false);
-        dp.push_back(-1);
+        dp.push_back(0);
     }
     // Insert edges to the metagraph.
     for (int i=0; i<n; i++) {
@@ -113,7 +113,7 @@ int main() {
     // indices of sccs indicates the reversed order of topological sort of metagraph.
     dp[s] = sccs[s].size();
     for (int i=s; i>=t; i--) {
-        if (dp[i] == -1) continue;
+        if (dp[i] == 0) continue;
         for (int j: metagraph[i]) {
             dp[j] = std::max(dp[j], dp[i] + (int)sccs[j].size());
         }
