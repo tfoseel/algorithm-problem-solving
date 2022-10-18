@@ -27,10 +27,15 @@
 ### Dynamic Programming
 * <a href="https://www.acmicpc.net/problem/10942"> 10942번: 팰린드롬?</a>
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
+* <a href="https://www.acmicpc.net/problem/2152"> 2152번: 여행 계획 세우기</a>
 * <a href="https://www.acmicpc.net/problem/2618"> 2618번: 경찰차</a>
 
 ### Dynamic Programming Using Bitfield
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
+
+### Graph Theory
+* <a href="https://www.acmicpc.net/problem/2150"> 2150번: Strongly Connected Component</a>
+* <a href="https://www.acmicpc.net/problem/2152"> 2152번: 여행 계획 세우기</a>
 
 ### Longest Increasing Sequence In O(n Log N)
 * <a href="https://www.acmicpc.net/problem/14003"> 14003번: 가장 긴 증가하는 부분 수열 5</a>
@@ -43,6 +48,13 @@
 
 ### Statistics
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Strongly Connected Component
+* <a href="https://www.acmicpc.net/problem/2150"> 2150번: Strongly Connected Component</a>
+* <a href="https://www.acmicpc.net/problem/2152"> 2152번: 여행 계획 세우기</a>
+
+### Topological Sorting
+* <a href="https://www.acmicpc.net/problem/2152"> 2152번: 여행 계획 세우기</a>
 
 ### Travelling Salesman Problem
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
