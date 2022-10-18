@@ -107,7 +107,7 @@ int main() {
             if (finished[i] != finished[j]) metagraph[finished[i]].insert(finished[j]);
         }
     }
-    // Re-define s and t for being used in metagraph.
+    // Redefine s and t for being used in metagraph.
     s = finished[s]; t = finished[t];
     // Since we used Tarjan's algorithm,
     // indices of sccs indicates the reversed order of topological sort of metagraph.
