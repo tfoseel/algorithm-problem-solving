@@ -61,6 +61,9 @@ for key, value in sorted(tag_problem_dict.items()):
     f.write("\n")
 f.close()
 
+# Clean up exe files
+os.system("del /q /s *.exe")
+
 # Automatically git add/commit/push solved problems.
 os.system("git add README.md")
 os.system("git commit -m " + date.today().strftime('"%Y.%m.%d. Update README.md (Auto committed)"'))
