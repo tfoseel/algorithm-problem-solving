@@ -24,6 +24,12 @@
 ### Combinatorics
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
+### Data Structures
+* <a href="https://www.acmicpc.net/problem/6549"> 6549번: 히스토그램에서 가장 큰 직사각형</a>
+
+### Divide And Conquer
+* <a href="https://www.acmicpc.net/problem/6549"> 6549번: 히스토그램에서 가장 큰 직사각형</a>
+
 ### Dynamic Programming
 * <a href="https://www.acmicpc.net/problem/10942"> 10942번: 팰린드롬?</a>
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
@@ -45,6 +51,12 @@
 
 ### Probability Theory
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
+
+### Segment Tree
+* <a href="https://www.acmicpc.net/problem/6549"> 6549번: 히스토그램에서 가장 큰 직사각형</a>
+
+### Stack
+* <a href="https://www.acmicpc.net/problem/6549"> 6549번: 히스토그램에서 가장 큰 직사각형</a>
 
 ### Statistics
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
