@@ -33,16 +33,16 @@ long long solve(std::vector<long long> &hist, long long lo, long long hi) {
         if (i == lo && j == hi) break;
         if (i == lo) {
             j++;
-            h = std::min(h, hist[j + 1]);
+            h = std::min(h, hist[j]);
         } else if (j == hi) {
             i--;
-            h = std::min(h, hist[i - 1]);
+            h = std::min(h, hist[i]);
         } else if (hist[i - 1] >= hist[j + 1]) {
             i--;
-            h = std::min(h, hist[i - 1]);
+            h = std::min(h, hist[i]);
         } else if (hist[i - 1] < hist[j + 1]) {
             j++;
-            h = std::min(h, hist[j + 1]);
+            h = std::min(h, hist[j]);
         }
     }
     return result; 
@@ -50,7 +50,7 @@ long long solve(std::vector<long long> &hist, long long lo, long long hi) {
 
 int main() {
     while (1) {
-        long long n;
+        int n;
         std::vector<long long> hist;
         // Input
         scanf("%d", &n);
