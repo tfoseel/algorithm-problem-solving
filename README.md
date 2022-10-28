@@ -9,6 +9,9 @@
 * From now on I will review some impressive problems among them and make some code snippets for further problem solving.
 
 ## Solved Problems
+### Ad-hoc
+* <a href="https://www.acmicpc.net/problem/2505"> 2505번: 두 번 뒤집기</a>
+
 ### Bayes Theorem
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
@@ -42,6 +45,9 @@
 ### Graph Theory
 * <a href="https://www.acmicpc.net/problem/2150"> 2150번: Strongly Connected Component</a>
 * <a href="https://www.acmicpc.net/problem/2152"> 2152번: 여행 계획 세우기</a>
+
+### Implementation
+* <a href="https://www.acmicpc.net/problem/2505"> 2505번: 두 번 뒤집기</a>
 
 ### Longest Increasing Sequence In O(n Log N)
 * <a href="https://www.acmicpc.net/problem/14003"> 14003번: 가장 긴 증가하는 부분 수열 5</a>
