@@ -1,11 +1,12 @@
 // BOJ 2505. 두 번 뒤집기
 
+#define TEST 1
+#define SOLVE 2
+
 #include <iostream>
 #include <vector>
 #include <set>
 #include <algorithm>
-
-// For test.
 #include <random>
 
 void flip(std::vector<int> &v, int i, int j) {
@@ -107,9 +108,6 @@ void test() {
         }
     }
 }
-
-const int TEST = 1;
-const int SOLVE = 2;
 
 int main() {
     int MODE = SOLVE;
