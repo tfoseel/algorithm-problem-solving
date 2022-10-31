@@ -21,6 +21,9 @@
 ### Bitmask
 * <a href="https://www.acmicpc.net/problem/2098"> 2098번: 외판원 순회</a>
 
+### Bruteforcing
+* <a href="https://www.acmicpc.net/problem/1007"> 1007번: 벡터 매칭</a>
+
 ### Calculus
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
@@ -53,6 +56,7 @@
 * <a href="https://www.acmicpc.net/problem/14003"> 14003번: 가장 긴 증가하는 부분 수열 5</a>
 
 ### Mathematics
+* <a href="https://www.acmicpc.net/problem/1007"> 1007번: 벡터 매칭</a>
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
 ### Probability Theory
