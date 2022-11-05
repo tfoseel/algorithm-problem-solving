@@ -57,6 +57,7 @@
 
 ### Mathematics
 * <a href="https://www.acmicpc.net/problem/1007"> 1007번: 벡터 매칭</a>
+* <a href="https://www.acmicpc.net/problem/1011"> 1011번: Fly me to the Alpha Centauri</a>
 * <a href="https://www.acmicpc.net/problem/14853"> 14853번: 동전 던지기</a>
 
 ### Probability Theory
